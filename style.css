@@ -24,15 +24,33 @@ body {
   background-size: cover;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+
+#keys {
+  margin: 0 auto;
+  padding: 6rem;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
 }
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.key {
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 15px;
+  background-color: rgba(0,0,0,.5);
+  color: #fff;
+}
+
+kbd {
+  font-size: 2rem;
+}
+
+.sound {
+  margin: 10px 0;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
