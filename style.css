@@ -11,8 +11,6 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background: url("./wallpaper.jpg") no-repeat center center fixed;
-  background-size: cover;
 }
 
 .content-wrapper {

@@ -7,55 +7,69 @@
     <title>Javascript Drum Kit</title>
   </head>
   <body>
-    <div class="content-wrapper">
-      <nav>
-        <a href="https://github.com/nugmara"
-          ><img src="./github-big-logo.png" alt="github-logo" width="50px"
-        /></a>
-        <a href="https://www.linkedin.com/in/dagmara-grabowska/"
-          ><img src="./linkedin.png" alt="linkedin-logo" width="50px"
-        /></a>
-      </nav>
+      <img
+        src="./public/wallpaper.jpg"
+        alt="wallpaper"
+        style="
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100vh;
+          object-fit: cover;
+          z-index: -1;
+        "
+      />
 
-      <div id="keys">
-        <div data-key="65" class="key">
-          <kbd>A</kbd>
-          <span class="sound">clap</span>
-        </div>
-        <div data-key="83" class="key">
-          <kbd>S</kbd>
-          <span class="sound">hithat</span>
-        </div>
-        <div data-key="68" class="key">
-          <kbd>D</kbd>
-          <span class="sound">kick</span>
-        </div>
-        <div data-key="70" class="key">
-          <kbd>F</kbd>
-          <span class="sound">openhat</span>
-        </div>
-        <div data-key="71" class="key">
-          <kbd>G</kbd>
-          <span class="sound">boom</span>
-        </div>
-        <div data-key="72" class="key">
-          <kbd>H</kbd>
-          <span class="sound">ride</span>
-        </div>
-        <div data-key="74" class="key">
-          <kbd>J</kbd>
-          <span class="sound">snare</span>
-        </div>
-        <div data-key="75" class="key">
-          <kbd>K</kbd>
-          <span class="sound">tom</span>
-        </div>
-        <div data-key="76" class="key">
-          <kbd>L</kbd>
-          <span class="sound">tink</span>
+      <div class="content-wrapper">
+        <nav>
+          <a href="https://github.com/nugmara"
+            ><img src="./github-big-logo.png" alt="github-logo" width="50px"
+          /></a>
+          <a href="https://www.linkedin.com/in/dagmara-grabowska/"
+            ><img src="./linkedin.png" alt="linkedin-logo" width="50px"
+          /></a>
+        </nav>
+
+        <div id="keys">
+          <div data-key="65" class="key">
+            <kbd>A</kbd>
+            <span class="sound">clap</span>
+          </div>
+          <div data-key="83" class="key">
+            <kbd>S</kbd>
+            <span class="sound">hithat</span>
+          </div>
+          <div data-key="68" class="key">
+            <kbd>D</kbd>
+            <span class="sound">kick</span>
+          </div>
+          <div data-key="70" class="key">
+            <kbd>F</kbd>
+            <span class="sound">openhat</span>
+          </div>
+          <div data-key="71" class="key">
+            <kbd>G</kbd>
+            <span class="sound">boom</span>
+          </div>
+          <div data-key="72" class="key">
+            <kbd>H</kbd>
+            <span class="sound">ride</span>
+          </div>
+          <div data-key="74" class="key">
+            <kbd>J</kbd>
+            <span class="sound">snare</span>
+          </div>
+          <div data-key="75" class="key">
+            <kbd>K</kbd>
+            <span class="sound">tom</span>
+          </div>
+          <div data-key="76" class="key">
+            <kbd>L</kbd>
+            <span class="sound">tink</span>
+          </div>
         </div>
       </div>
-    </div>
 
     <audio
       data-key="65"
