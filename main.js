@@ -1,28 +1,35 @@
-import './style.css'
+import "./style.css";
 
 function playSound(e) {
-    const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`)
-    const key = document.querySelector(`.key[data-key="${e.keyCode}"]`)
+  let key;
+  let audio;
 
-    if (!audio) return
+  if (e.type === "keydown") {
+    audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+    key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+  } else if (e.type === "touchstart") {
+    key = e.target.closest(".key");
+    if (!key) return;
+    const dataKey = key.getAttribute("data-key");
+    audio = document.querySelector(`audio[data-key="${dataKey}"]`)
+  }
 
-    audio.currentTime = 0;
-    audio.play()
-    key.classList.add("playing")
+  if (!audio) return;
+
+  audio.currentTime = 0;
+  audio.play();
+  key.classList.add("playing");
 }
 
 function removeTransition(e) {
-  if (e.propertyName !== "transform") return
-  this.classList.remove("playing")
-  console.log(e)
+  if (e.propertyName !== "transform") return;
+  this.classList.remove("playing");
 }
 
-const keys = document.querySelectorAll(".key")
+const keys = document.querySelectorAll(".key");
 
-keys.forEach(key => key.addEventListener("transitionend", removeTransition))
-window.addEventListener("keydown", playSound)
-window.addEventListener("touchstart", playSound )
-
-
-
-
+keys.forEach((key) =>{
+  key.addEventListener("transitionend", removeTransition);
+  key.addEventListener("touchstart", playSound)
+})
+window.addEventListener("keydown", playSound);
