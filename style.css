@@ -35,6 +35,17 @@ body {
     height: 100vh;
     z-index: -1;
   }
+
+  nav {
+    position: absolute;
+    top: 0;
+    right: 0;     
+    padding: 10px;  
+  }
+  
+  nav a img {
+    margin-left: 10px;
+  }
 }
 .content-wrapper {
   display: flex;
@@ -53,7 +64,6 @@ nav {
 nav a img {
   margin-left: 20px;
 }
-
 
 #keys {
   margin: 0 auto;
